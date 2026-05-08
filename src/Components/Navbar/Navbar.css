@@ -1,0 +1,39 @@
+.navbar{
+    padding: 15px 3%;
+    position: absolute;
+    top: 10px;
+    width: calc(100% - 4%);
+    height: 85px;
+    border-radius: 50px;
+    margin: 15px 2%;
+    background: transparent;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    box-shadow: 0px 0px 3px -1px #eee;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+}
+.navbar img{
+    width: 180px;
+}
+.navbar ul{
+    display: flex;
+    gap: 30px;
+}
+.navbar ul li{
+    list-style: none;
+}
+.navbar ul li a{
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: #ccc;
+    text-transform: uppercase;
+}
+.navbar .btns svg{
+    font-size: 30px;
+    color: #ccc;
+    cursor: pointer;
+}
