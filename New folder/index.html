@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maaz Ali - Premium Resume</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 8mm;
+            background-color: #030712;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #030712;
+            color: #f3f4f6;
+            font-size: 8.5pt;
+            line-height: 1.4;
+            padding: 50px;
+        }
+
+        .layout-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        /* Left Side Panel - Sleek and structured */
+        .sidebar-cell {
+            width: 30%;
+            background-color: #0b0f19; 
+            padding: 18px;
+            border-radius: 6px;
+            border: 1px solid #1f2937;
+            padding-bottom: 150px;
+            vertical-align: top;
+        }
+
+        /* Right Side Main Content */
+        .main-cell {
+            width: 70%;
+            padding-left: 20px;
+            vertical-align: top;
+        }
+
+        /* Headshot Styling */
+        .profile-container {
+            text-align: center;
+            margin-bottom: 20px;
+            width: 190px;
+            height: 190px;
+            border-radius: 50%;
+            border: 4px solid #818cf8;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            /* padding-top: 50px; */
+            object-fit: cover;
+            display: block;
+            margin: 0 auto;
+            background-color: #111827;
+        }
+        .profile-img:hover{
+            animation: animate 0.5s linear;
+        }
+        @keyframes animate {
+            50%{
+                padding:50%;
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Headers & Sections */
+        .header-box {
+            background: linear-gradient(135deg, #0b0f19 0%, #111827 100%);
+            border: 1px solid #1f2937;
+            border-radius: 16px;
+            padding: 18px;
+            margin-bottom: 15px;
+        }
+
+        .name {
+            font-size: 21pt;
+            font-weight: 800;
+            color: #ffffff;
+            margin: 0;
+            letter-spacing: -0.5px;
+        }
+
+        .title {
+            font-size: 11pt;
+            color: #a78bfa; 
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 4px 0 10px 0;
+        }
+
+        .summary-text {
+            font-size: 8.2pt;
+            color: #9ca3af;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .section-title {
+            font-size: 10.5pt;
+            font-weight: bold;
+            color: #ffffff;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            border-left: 4px solid #a78bfa;
+            padding-left: 8px;
+        }
+
+        .sidebar-title {
+            font-size: 8.5pt;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: #c084fc; 
+            border-bottom: 1px solid #374151;
+            padding-bottom: 3px;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        /* Contact Items */
+        .contact-item {
+            margin-bottom: 10px;
+            font-size: 7.8pt;
+            color: #9ca3af;
+        }
+
+        .contact-item strong {
+            color: #e2e8f0;
+            display: block;
+            font-size: 7.5pt;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 2px;
+        }
+
+        .contact-item a {
+            color: #818cf8;
+            text-decoration: none;
+        }
+
+        /* Skills Tags */
+        .skill-tag {
+            display: inline-block;
+            background-color: #111827;
+            color: #e2e8f0;
+            padding: 3px 6px;
+            border-radius: 6px;
+            margin: 2px 1.5px;
+            font-size: 7.2pt;
+            border: 1px solid #374151;
+            font-weight: 500;
+        }
+
+        /* Cards Layout */
+        .card {
+            background: linear-gradient(135deg, #0b0f19 0%, #0f172a 100%);
+            border: 1px solid #1f2937;
+            border-radius: 12px;
+            padding: 12px;
+            margin-bottom: 10px;
+        }
+
+        .card-header {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 5px;
+        }
+
+        .card-title {
+            font-size: 9.5pt;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .card-right {
+            text-align: right;
+            font-size: 7.8pt;
+            color: #818cf8;
+            font-weight: bold;
+        }
+
+        .card-right a {
+            color: #818cf8;
+            text-decoration: none;
+        }
+
+        .card-subtitle {
+            font-size: 8pt;
+            color: #94a3b8;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .card-list {
+            margin: 0;
+            padding-left: 12px;
+            color: #9ca3af;
+            font-size: 8pt;
+        }
+
+        .card-list li {
+            margin-bottom: 3px;
+        }
+
+        /* Education Layout */
+        .edu-box {
+            margin-bottom: 10px;
+        }
+
+        .edu-title {
+            font-size: 8.2pt;
+            font-weight: bold;
+            color: #f3f4f6;
+        }
+
+        .edu-detail {
+            font-size: 7.5pt;
+            color: #9ca3af;
+            margin-top: 2px;
+        }
+
+        .edu-date {
+            font-size: 7.5pt;
+            color: #818cf8;
+            font-weight: 600;
+            margin-top: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <table class="layout-table">
+        <tr>
+            <!-- Left Sidebar Section -->
+            <td class="sidebar-cell">
+                <div class="profile-container">
+                    <!-- Aapki image yahan se load hogi -->
+                    <img class="profile-img" src="user.png" alt="Maaz Ali">
+                </div>
+
+                <div class="sidebar-section" style="margin-top: 10px;">
+                    <div class="sidebar-title">Contact Directory</div>
+                    <div class="contact-item">
+                        <strong>Email Address</strong>
+                        <a href="mailto:maazjan.dev@gmail.com">maazjan.dev@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Digital Hub</strong>
+                        <a href="https://maazali091.github.io" target="_blank">maazali091.github.io</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>GitHub Engine</strong>
+                        <a href="https://github.com/maazali091" target="_blank">github.com/maazali091</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Location</strong>
+                        Peshawar, Pakistan
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <div class="sidebar-title">Core Engine</div>
+                    <div>
+                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag">JavaScript (ES6+)</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                        <span class="skill-tag">HTML5 / CSS3</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Git & GitHub</span>
+                        <span class="skill-tag">Responsive UI Engineering</span>
+                        <span class="skill-tag">REST APIs</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <div class="sidebar-title">Education</div>
+                    <div class="edu-box">
+                        <div class="edu-title">Fsc Computer Science</div>
+                        <div class="edu-detail">Al-Muslim College CHD</div>
+                        <div class="edu-date">2023</div>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <div class="sidebar-title">Interests</div>
+                    <div class="contact-item" style="color: #9ca3af; line-height: 1.4;">
+                        High-Performance Web Render Engines, UI Animation Frameworks, Open Source Projects.
+                    </div>
+                </div>
+            </td>
+
+            <!-- Right Main Content Section -->
+            <td class="main-cell">
+                <!-- Glowing Premium Header Box -->
+                <div class="header-box">
+                    <h1 class="name">Maaz Ali</h1>
+                    <div class="title">Frontend Web Developer</div>
+                    <p class="summary-text">
+                        Passionate Frontend Web Developer and BSCS student specializing in building high-fidelity, lightning-fast web applications. Focused on engineering responsive, fluid, and robust user interfaces using React and Tailwind CSS while ensuring clean architecture, semantic code, and top-tier page performance optimizations.
+                    </p>
+                </div>
+
+                <div class="section-title">Engineered Projects</div>
+
+                <!-- Project 1 -->
+                <div class="card">
+                    <table class="card-header">
+                        <tr>
+                            <td class="card-title">PPC Growth Lab</td>
+                            <td class="card-right"><a href="https://ppcgrowthlab.com" target="_blank">ppcgrowthlab.com &nearr;</a></td>
+                        </tr>
+                    </table>
+                    <div class="card-subtitle">Live Client Production Build (React & Tailwind CSS)</div>
+                    <ul class="card-list">
+                        <li>Designed and engineered a modular corporate interface for an Amazon PPC Management agency.</li>
+                        <li>Configured and registered custom secure domain properties with optimized DNS routing.</li>
+                        <li>Identified, analyzed, and successfully resolved canonical redirect flags in Google Search Console.</li>
+                    </ul>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="card">
+                    <table class="card-header">
+                        <tr>
+                            <td class="card-title">Personal Developer Portfolio Hub</td>
+                            <td class="card-right"><a href="https://maazali091.github.io" target="_blank">maazali091.github.io &nearr;</a></td>
+                        </tr>
+                    </table>
+                    <div class="card-subtitle">Production Dashboard & UI Laboratory (React)</div>
+                    <ul class="card-list">
+                        <li>Crafted a sleek, neon-inspired tech portfolio utilizing highly optimized modular component states.</li>
+                        <li>Built and maintained automated compilation scripts deployed seamlessly via GitHub Pages.</li>
+                        <li>Achieved solid 95+ scores on Lighthouse performance, accessibility, and SEO metrics.</li>
+                    </ul>
+                </div>
+
+                <div class="section-title">Industry Experience</div>
+
+                <!-- Experience -->
+                <div class="card">
+                    <table class="card-header">
+                        <tr>
+                            <td class="card-title">Freelance Frontend Developer</td>
+                            <td class="card-right" style="color: #cbd5e1; font-weight: 600;">2025 - PRESENT</td>
+                        </tr>
+                    </table>
+                    <div class="card-subtitle">Global Client Base</div>
+                    <ul class="card-list">
+                        <li>Translating complex UI/UX designs into pixel-perfect, highly fluid and semantic HTML/CSS structures.</li>
+                        <li>Refining and optimizing outdated codebases to utilize rapid Tailwind utilities and React hooks.</li>
+                        <li>Managing clean Git architectures and collaborating directly with clients to meet performance targets.</li>
+                    </ul>
+                </div>
+
+                <div class="section-title">Core Development Standards</div>
+                <div style="font-size: 7.8pt; color: #9ca3af; line-height: 1.5; padding-left: 5px;">
+                    🎯 Mobile-First Responsive Frameworks &bull; ⚡ Highly Optimized React Hooks & Performance &bull; 🛠️ Systematic Version Control with Git/GitHub &bull; 🔍 Advanced SEO & Page-Speed Lighthouse Auditing &bull; 🎨 Semantic and Scalable Component Architecture
+                </div>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
